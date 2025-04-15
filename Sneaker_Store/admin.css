@@ -1,0 +1,142 @@
+/* Reset some basic styles */
+* html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f4f6f8;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  /* Header */
+  .page-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #2f3e46;
+    padding: 1rem 2rem;
+    color: #fff;
+  }
+  
+  .logo svg {
+    fill: #fff;
+  }
+  
+  /* Navigation Toggle (Mobile) */
+  .toggle-mob-menu {
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+  }
+  
+  .toggle-mob-menu svg {
+    fill: currentColor;
+  }
+  
+  /* Sidebar Menu */
+  .admin-menu {
+    list-style: none;
+    width: 250px;
+    min-height: 100vh;
+    background-color: #354f52;
+    padding: 2rem 1rem;
+    position: fixed;
+    top: 80px; /* adjust if needed */
+    left: 0;
+    overflow-y: auto;
+  }
+  
+  .admin-menu li {
+    margin-bottom: 1.5rem;
+  }
+  
+  .admin-menu a {
+    display: flex;
+    align-items: center;
+    color: #ddd;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    transition:cubic-bezier(0.895, 0.03, 0.685, 0.22) 0.3s ease;
+    border-radius: 6px;
+  }
+  
+  .admin-menu a:hover {
+    background-color: #52796f;
+  }
+  
+  .admin-menu svg {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+    margin-right: 10px;
+  }
+  
+  /* Menu Heading */
+  .menu-heading h3 {
+    color: #adb5bd;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    padding-left: 1rem;
+    text-transform: uppercase;
+  }
+  
+  /* Dark Mode Toggle */
+  .switch {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #3a5a40;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+  }
+  
+  .switch input[type="checkbox"] {
+    margin-right: 0.5rem;
+  }
+  
+  /* Collapse Button */
+  .collapse-btn {
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+    background: none;
+    border: none;
+    color: #ccc;
+    cursor: pointer;
+    padding: 0.5rem;
+    transition: background 0.3s ease;
+    width: 100%;
+  }
+  
+  .collapse-btn:hover {
+    background-color: #52796f;
+    border-radius: 6px;
+  }
+  
+  .collapse-btn svg {
+    margin-right: 10px;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .toggle-mob-menu {
+      display: block;
+    }
+  
+    .admin-menu {
+      position: absolute;
+      left: -260px;
+      transition: left 0.3s ease;
+    }
+  
+    .admin-menu.open {
+      left: 0;
+    }
+  }
+  
